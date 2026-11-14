@@ -11,6 +11,10 @@ Play rock paper scissors against the computer using your webcam. Show your hand,
 
 I trained an image model with Google's Teachable Machine using 4 classes: rock, paper, scissors and nothing. The "nothing" class is so it doesn't guess a hand when there isn't one.
 
+I took 350+ webcam photos for each class (around 1,400 total). I moved my hand around while recording: closer and further from the camera, different angles, left and right side of the frame. That way the model learns the hand shape and not just one position.
+
+![Training the model in Teachable Machine](images/training.png)
+
 The game runs the model on every webcam frame. It only counts a guess if the model is more than 60% sure. When you hit "Play round" there's a 3-2-1 countdown, and whatever it sees at "Shoot!" is your move.
 
 ## Built with
